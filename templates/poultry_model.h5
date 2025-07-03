@@ -1,0 +1,17 @@
+# Step 1: Navigate to your project folder
+cd transfer-learning-based-classification-of-poultry
+
+# Step 2: Make sure the model folder exists
+mkdir -p model
+
+# Step 3: Move your .h5 file into the model folder (skip if already there)
+mv /path/to/poultry_model.h5 model/
+
+# Step 4: Add the file to Git staging
+git add model/poultry_model.h5
+
+# Step 5: Commit the file
+git commit -m "Add trained poultry model (.h5 file)"
+
+# Step 6: Push to GitHub
+git push origin main
