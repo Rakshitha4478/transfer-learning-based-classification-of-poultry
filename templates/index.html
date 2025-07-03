@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poultry Classifier</title>
+</head>
+<body>
+    <h1>Upload an image of poultry</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <img src="{{ url_for('static', filename=image) }}" width="300">
+    {% endif %}
+</body>
+</html>
